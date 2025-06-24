@@ -5,14 +5,14 @@ from PIL import Image
 
 app = FastAPI()
 
-API_KEY = "ch9ayfa"  # غير المفتاح ديالك هنا
+API_KEY = "franko_ff"  # غير المفتاح ديالك هنا
 
 @app.get("/banner-image")
 def get_banner(uid: str = Query(...), region: str = Query(...), key: str = Query(None)):
     if key != API_KEY:
         raise HTTPException(status_code=403, detail="Invalid API key")
 
-    url = f"https://aditya-banner-v5op.onrender.com/banner-image?uid={uid}&region={region}"
+    url = f"https://aditya-banner-v9op.onrender.com/banner-image?uid={uid}&region={region}"
 
     try:
         res = requests.get(url, timeout=10)

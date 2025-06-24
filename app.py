@@ -5,7 +5,7 @@ from PIL import Image
 
 app = FastAPI()
 
-API_KEY = "franko_ff"  # غير المفتاح ديالك هنا
+API_KEY = "ch9ayfa"  # غير المفتاح ديالك هنا
 
 @app.get("/banner-image")
 def get_banner(uid: str = Query(...), region: str = Query(...), key: str = Query(None)):
